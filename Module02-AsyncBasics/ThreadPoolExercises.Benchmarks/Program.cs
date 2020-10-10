@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using BenchmarkDotNet.Running;
 
 namespace ThreadPoolExercises.Benchmarks
@@ -7,7 +8,8 @@ namespace ThreadPoolExercises.Benchmarks
     {
         static void Main(string[] args)
         {
-            BenchmarkRunner.Run<ThreadingHelpersBenchmarks>();
+            //BenchmarkRunner.Run<ThreadingHelpersBenchmarks>();
+            BenchmarkSwitcher.FromAssembly(Assembly.GetExecutingAssembly()).Run(args);
         }
     }
 }
