@@ -7,7 +7,8 @@ namespace AsyncAwaitExercises.Core
 {
     public class AsyncHelpers
     {
-        public static async Task<string> GetStringWithRetries(HttpClient client, string url, int maxTries = 3, CancellationToken token = default)
+        private static async Task<string> GetStringWithRetriesInt(HttpClient client, string url, int maxTries = 3,
+            CancellationToken token = default)
         {
             // Create a method that will try to get a response from a given `url`, retrying `maxTries` number of times.
             // It should wait one second before the second try, and double the wait time before every successive retry
@@ -22,8 +23,45 @@ namespace AsyncAwaitExercises.Core
             // * `HttpClient.GetStringAsync` does not accept cancellation token (use `GetAsync` instead)
             // * you may use `EnsureSuccessStatusCode()` method
 
+            int retryTimeInSeconds = 1;
+
+
+
+            for (int i = 0; i < maxTries; i++)
+            {
+                try
+                {
+                    var response = await client.GetAsync(url, token);
+                    response.EnsureSuccessStatusCode();
+                    var content = await response.Content.ReadAsStringAsync();
+                    return content;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    await Task.Delay(retryTimeInSeconds * 1000, token);
+                    retryTimeInSeconds = retryTimeInSeconds * 2;
+
+                    if (i >= maxTries - 1)
+                    {
+                        throw;
+                    }
+                }
+            }
+
+
             return string.Empty;
         }
 
+        public static Task<string> GetStringWithRetries(HttpClient client, string url, int maxTries = 3,
+            CancellationToken token = default)
+        {
+            if (maxTries < 2)
+            {
+                throw new ArgumentException("Must be at least 2.", nameof(maxTries));
+            }
+
+            return GetStringWithRetriesInt(client, url, maxTries, token);
+        }
     }
 }
