@@ -11,9 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskCompletionSourceExercis
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleApp", "ExampleApp\ExampleApp.csproj", "{A54CD837-A822-4DC4-800C-984BAACE6869}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwaitableExercises.Core", "AwaitableExercises.Core\AwaitableExercises.Core.csproj", "{92362529-07C5-482F-A831-FC26183C1A73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwaitableExercises.Core", "AwaitableExercises.Core\AwaitableExercises.Core.csproj", "{92362529-07C5-482F-A831-FC26183C1A73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwaitableExercises.Tests", "AwaitableExercises.Tests\AwaitableExercises.Tests.csproj", "{A53946E5-DFBF-42B3-BF47-886A9794C17C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwaitableExercises.Tests", "AwaitableExercises.Tests\AwaitableExercises.Tests.csproj", "{A53946E5-DFBF-42B3-BF47-886A9794C17C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronizationContextDemo", "SynchronizationContextDemo\SynchronizationContextDemo.csproj", "{F36672C1-E984-4B47-9480-FD08ABD5F3BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleThreadedSynchronizationContextDemo", "SingleThreadedSynchronizationContextDemo\SingleThreadedSynchronizationContextDemo.csproj", "{04B86BC0-CC51-40F5-BFBA-762071FD0890}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +75,22 @@ Global
 		{A53946E5-DFBF-42B3-BF47-886A9794C17C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A53946E5-DFBF-42B3-BF47-886A9794C17C}.Release|x64.ActiveCfg = Release|Any CPU
 		{A53946E5-DFBF-42B3-BF47-886A9794C17C}.Release|x64.Build.0 = Release|Any CPU
+		{F36672C1-E984-4B47-9480-FD08ABD5F3BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F36672C1-E984-4B47-9480-FD08ABD5F3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F36672C1-E984-4B47-9480-FD08ABD5F3BC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F36672C1-E984-4B47-9480-FD08ABD5F3BC}.Debug|x64.Build.0 = Debug|Any CPU
+		{F36672C1-E984-4B47-9480-FD08ABD5F3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F36672C1-E984-4B47-9480-FD08ABD5F3BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F36672C1-E984-4B47-9480-FD08ABD5F3BC}.Release|x64.ActiveCfg = Release|Any CPU
+		{F36672C1-E984-4B47-9480-FD08ABD5F3BC}.Release|x64.Build.0 = Release|Any CPU
+		{04B86BC0-CC51-40F5-BFBA-762071FD0890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04B86BC0-CC51-40F5-BFBA-762071FD0890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04B86BC0-CC51-40F5-BFBA-762071FD0890}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{04B86BC0-CC51-40F5-BFBA-762071FD0890}.Debug|x64.Build.0 = Debug|Any CPU
+		{04B86BC0-CC51-40F5-BFBA-762071FD0890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04B86BC0-CC51-40F5-BFBA-762071FD0890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04B86BC0-CC51-40F5-BFBA-762071FD0890}.Release|x64.ActiveCfg = Release|Any CPU
+		{04B86BC0-CC51-40F5-BFBA-762071FD0890}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
